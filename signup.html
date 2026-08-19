@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | FastVPS.com</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">FastVPS<span>.com</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#os">OS Options</a></li>
+                <li><a href="login.html" class="btn">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-card">
+            <h2>Create Your Account</h2>
+            <p class="auth-subtitle">Sign up to start deploying your VPS in minutes.</p>
+
+            <form id="signupForm" class="auth-form">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" minlength="6" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" minlength="6" required>
+
+                <label class="checkbox-label terms-label">
+                    <input type="checkbox" name="terms" required> I agree to the Terms of Service and Privacy Policy
+                </label>
+
+                <div id="formMessage" class="form-message"></div>
+
+                <button type="submit" class="btn-primary auth-btn">Create Account</button>
+            </form>
+
+            <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FastVPS.com. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = document.getElementById('formMessage');
+            const pass = document.getElementById('password').value;
+            const confirm = document.getElementById('confirmPassword').value;
+
+            if (pass !== confirm) {
+                msg.textContent = 'Passwords do not match.';
+                msg.className = 'form-message error';
+                return;
+            }
+
+            // NOTE: This is a static demo form only.
+            // Connect this to a real backend (e.g. Firebase, Supabase, or your own API)
+            // to actually create accounts.
+            msg.textContent = 'Demo only: connect a backend to enable real signup.';
+            msg.className = 'form-message info';
+        });
+    </script>
+
+</body>
+</html>
