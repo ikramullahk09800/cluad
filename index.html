@@ -7,7 +7,7 @@
     <meta name="description" content="Get high-performance VPS hosting with 99.9% uptime, 24/7 expert support, and instant setup. Choose your favorite OS. Affordable & reliable VPS solutions.">
     <meta name="keywords" content="VPS hosting, buy VPS, best VPS server, Linux VPS, Windows VPS, 24/7 support VPS, cheap VPS">
     <meta name="robots" content="index, follow">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,40 +28,63 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>High-Performance <span>VPS Hosting</span></h1>
-            <p>Powerful, reliable, and scalable Virtual Private Servers. Experience lightning-fast speed with a 99.9% uptime guarantee and 24/7 expert support.</p>
-            <a href="#pricing" class="btn-primary">View Plans & Pricing</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <span class="eyebrow">// deploy in under 60 seconds</span>
+                <h1>Servers that boot <em>before your coffee cools</em></h1>
+                <p>High-performance Virtual Private Servers with 99.9% uptime, full root access, and real humans on support — day or night.</p>
+                <div class="hero-ctas">
+                    <a href="#pricing" class="btn-primary">View Plans & Pricing</a>
+                    <a href="signup.html" class="btn-secondary">Create Account</a>
+                </div>
+            </div>
+            <div class="terminal-card">
+                <div class="terminal-bar"><span></span><span></span><span></span></div>
+                <div class="terminal-body">
+                    <div class="line"><span class="prompt">$</span> fastvps deploy --plan standard</div>
+                    <div class="line dim">Provisioning region: fra-1 (Frankfurt)</div>
+                    <div class="line dim">Allocating 2 vCPU · 4GB RAM · 100GB SSD</div>
+                    <div class="line"><span class="ok">✓</span> Server online in 41s</div>
+                    <div class="line dim">uptime: 99.98% · latency: 8ms</div>
+                    <div class="line"><span class="prompt">$</span> <span class="cursor"></span></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
-        <h2>Why Choose Us?</h2>
+        <div class="section-head">
+            <span class="eyebrow">Why FastVPS</span>
+            <h2>Built for people who can't afford downtime</h2>
+        </div>
         <div class="cards">
             <div class="card">
                 <h3>99.9% Uptime Guarantee</h3>
-                <p>We ensure your website and applications are always online with our enterprise-grade infrastructure.</p>
+                <p>Enterprise-grade infrastructure keeps your websites and applications online, monitored around the clock.</p>
             </div>
             <div class="card">
                 <h3>24/7 Expert Support</h3>
-                <p>Our dedicated support team is available around the clock to help you with any technical issues.</p>
+                <p>Real engineers, not scripts. Get help with any technical issue any hour of the day.</p>
             </div>
             <div class="card">
                 <h3>Instant Setup</h3>
-                <p>Get your server deployed in minutes. No waiting time, just instant access to your VPS.</p>
+                <p>Your server deploys in under a minute. No queues, no waiting — just instant access.</p>
             </div>
             <div class="card">
                 <h3>Full Root Access</h3>
-                <p>Take complete control of your server environment with full root/administrator access.</p>
+                <p>Complete control of your environment, with full root and administrator privileges.</p>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">
-        <h2>Our VPS Plans</h2>
-        <p>Choose the best plan that fits your needs. Upgrade anytime!</p>
+        <div class="section-head">
+            <span class="eyebrow">Plans</span>
+            <h2>Choose your server</h2>
+            <p>Simple pricing that scales with you. Upgrade anytime.</p>
+        </div>
         <div class="pricing-cards">
             <!-- Starter Plan -->
             <div class="price-card">
@@ -73,7 +96,7 @@
                     <li>50 GB SSD Storage</li>
                     <li>1 TB Bandwidth</li>
                 </ul>
-                <a href="#" class="btn-price">Order Now</a>
+                <a href="signup.html" class="btn-price">Order Now</a>
             </div>
             <!-- Popular Plan -->
             <div class="price-card popular">
@@ -86,7 +109,7 @@
                     <li>100 GB SSD Storage</li>
                     <li>3 TB Bandwidth</li>
                 </ul>
-                <a href="#" class="btn-price">Order Now</a>
+                <a href="signup.html" class="btn-price">Order Now</a>
             </div>
             <!-- Premium Plan -->
             <div class="price-card">
@@ -98,15 +121,17 @@
                     <li>200 GB SSD Storage</li>
                     <li>Unlimited Bandwidth</li>
                 </ul>
-                <a href="#" class="btn-price">Order Now</a>
+                <a href="signup.html" class="btn-price">Order Now</a>
             </div>
         </div>
     </section>
 
     <!-- Available OS Section -->
     <section id="os" class="os-section">
-        <h2>Available Operating Systems</h2>
-        <p>1-Click install for your favorite OS.</p>
+        <div class="section-head">
+            <span class="eyebrow">One-click install</span>
+            <h2>Available operating systems</h2>
+        </div>
         <div class="os-list">
             <div class="os-box">
                 <img src="https://cdn.simpleicons.org/ubuntu/E95420" alt="Ubuntu VPS">
