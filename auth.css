@@ -1,47 +1,50 @@
-/* Auth Pages (Login / Signup) — matches warm cream / terracotta theme */
+/* Auth Pages (Login / Signup) - Claude Theme */
 .auth-section {
     min-height: calc(100vh - 140px);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--clay);
-    padding: 70px 20px;
+    background: linear-gradient(160deg, #F5F5F0 0%, #EDE8E3 50%, #E8E4DF 100%);
+    padding: 60px 20px;
+    position: relative;
+}
+
+.auth-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(204, 120, 92, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
 }
 
 .auth-card {
-    background: var(--cream-soft);
+    background: #FFFFFF;
     width: 100%;
-    max-width: 420px;
-    padding: 44px 38px;
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    box-shadow: 0 16px 45px rgba(42, 36, 25, 0.12);
-}
-
-.auth-card .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--terracotta);
-    display: block;
-    text-align: center;
-    margin-bottom: 12px;
+    max-width: 440px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid #E8E4DF;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
 }
 
 .auth-card h2 {
-    font-family: var(--font-display);
-    color: var(--ink);
-    font-size: 28px;
-    margin-bottom: 8px;
+    color: #2D2D2D;
+    font-size: 32px;
+    margin-bottom: 10px;
     text-align: center;
-    letter-spacing: -0.3px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .auth-subtitle {
-    color: var(--ink-soft);
+    color: #6B6B6B;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-size: 15px;
 }
 
@@ -51,11 +54,11 @@
 }
 
 .auth-form label {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 6px;
-    margin-top: 16px;
+    color: #2D2D2D;
+    margin-bottom: 8px;
+    margin-top: 18px;
 }
 
 .auth-form label:first-of-type {
@@ -65,23 +68,24 @@
 .auth-form input[type="text"],
 .auth-form input[type="email"],
 .auth-form input[type="password"] {
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    border-radius: 5px;
+    padding: 14px 16px;
+    border: 2px solid #E8E4DF;
+    border-radius: 10px;
     font-size: 15px;
-    font-family: var(--font-body);
     outline: none;
-    background: var(--cream);
-    color: var(--ink);
-    transition: border-color 0.2s ease;
-}
-
-.auth-form input::placeholder {
-    color: #A99C82;
+    transition: all 0.3s ease;
+    background: #FAFAFA;
+    color: #2D2D2D;
 }
 
 .auth-form input:focus {
-    border-color: var(--terracotta);
+    border-color: #CC785C;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(204, 120, 92, 0.1);
+}
+
+.auth-form input::placeholder {
+    color: #A8A8A8;
 }
 
 .form-row {
@@ -95,11 +99,16 @@
 .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 7px;
-    color: var(--ink-soft);
-    font-weight: normal;
+    gap: 8px;
+    color: #4A4A4A;
+    font-weight: 400;
     cursor: pointer;
-    accent-color: var(--terracotta);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #CC785C;
 }
 
 .terms-label {
@@ -110,7 +119,7 @@
 }
 
 .forgot-link {
-    color: var(--terracotta);
+    color: #CC785C;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -122,41 +131,54 @@
 
 .auth-btn {
     width: 100%;
-    margin-top: 26px;
+    margin-top: 28px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    font-family: var(--font-body);
+    font-weight: 600;
+    background-color: #CC785C !important;
+    color: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(204, 120, 92, 0.25);
+}
+
+.auth-btn:hover {
+    background-color: #B8694F !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(204, 120, 92, 0.35);
 }
 
 .form-message {
-    margin-top: 16px;
+    margin-top: 18px;
     font-size: 14px;
     min-height: 18px;
     text-align: center;
+    font-weight: 500;
 }
 
 .form-message.info {
-    color: var(--terracotta);
+    color: #CC785C;
 }
 
 .form-message.error {
-    color: #B23A2E;
+    color: #D9534F;
 }
 
 .form-message.success {
-    color: var(--sage);
+    color: #5CB85C;
 }
 
 .auth-switch {
     text-align: center;
-    margin-top: 26px;
+    margin-top: 28px;
     font-size: 14px;
-    color: var(--ink-soft);
+    color: #6B6B6B;
 }
 
 .auth-switch a {
-    color: var(--terracotta);
+    color: #CC785C;
     font-weight: 600;
     text-decoration: none;
 }
