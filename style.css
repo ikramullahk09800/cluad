@@ -108,6 +108,14 @@ nav {
     margin: 0 auto;
 }
 
+.hero-illustration-img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .eyebrow-light {
     color: #E8B49A;
 }
