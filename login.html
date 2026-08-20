@@ -13,15 +13,40 @@
     <header>
         <nav>
             <div class="logo">FastVPS<span>.com</span></div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#pricing">Pricing</a></li>
                 <li><a href="index.html#os">OS Options</a></li>
                 <li><a href="signup.html" class="btn">Sign Up</a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
+        <div class="nav-overlay" id="navOverlay"></div>
     </header>
+    <script>
+        (function() {
+            var toggle = document.getElementById('navToggle');
+            var links = document.getElementById('navLinks');
+            var overlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                links.classList.remove('open');
+                overlay.classList.remove('show');
+                toggle.classList.remove('active');
+            }
+            toggle.addEventListener('click', function() {
+                links.classList.toggle('open');
+                overlay.classList.toggle('show');
+                toggle.classList.toggle('active');
+            });
+            overlay.addEventListener('click', closeMenu);
+            links.querySelectorAll('a').forEach(function(a) {
+                a.addEventListener('click', closeMenu);
+            });
+        })();
+    </script>
 
     <section class="auth-section">
         <div class="auth-card">

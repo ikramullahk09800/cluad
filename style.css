@@ -77,6 +77,42 @@ nav {
     transform: translateY(-1px);
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1100;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #2D2D2D;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 999;
+}
+
+.nav-overlay.show {
+    display: block;
+}
+
 /* Hero Section */
 .hero {
     padding: 120px 20px 100px;
@@ -614,21 +650,68 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-visual { order: -1; }
+    .hero-ctas { justify-content: center; }
+}
+
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
     .nav-links {
-        gap: 15px;
-        font-size: 13px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 260px;
+        max-width: 78vw;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 90px 30px 30px;
+        gap: 22px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1050;
+        box-shadow: -8px 0 28px rgba(0, 0, 0, 0.15);
     }
 
-    .hero h1 {
-        font-size: 36px;
+    .nav-links.open {
+        transform: translateX(0);
     }
 
-    .hero p {
+    .nav-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-h1-dark {
+        font-size: 32px;
+    }
+
+    .hero-p-dark {
         font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-illustration-img {
+        max-width: 190px;
     }
 
     .price-card.popular {
         transform: scale(1);
     }
+}
+
+@media (max-width: 480px) {
+    .hero { padding: 70px 20px 60px; }
+    .hero-h1-dark { font-size: 28px; }
+    .hero-illustration-img { max-width: 160px; }
 }
