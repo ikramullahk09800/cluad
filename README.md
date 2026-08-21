@@ -122,18 +122,18 @@ If real auth is added later (e.g. Firebase/Supabase), update this section.
 
 ## 7. Rules for Future Edits (for any human or AI, including Claude)
 
-1. **Read this README before editing anything.**
-2. Reuse existing classes/components listed above instead of inventing new ones when a
-   suitable one already exists — this is what keeps every page visually consistent.
-3. Stick to the color palette in Section 3 unless there's a good reason to expand it —
-   and if you do, document the new color here.
-4. Never copy images/illustrations from stock or template sites without a verified
-   license. Prefer original SVGs or MIT/CC0-licensed assets.
-5. When you edit `style.css`, bump the `?v=N` query string on **every** HTML page that
-   loads it, so browsers don't serve a stale cached copy.
-6. **After finishing any change, add a dated entry to the Changelog below** describing
-   what changed and why — this file is the single source of truth for the site's design
-   history.
+1.  **Read this README before editing anything.**
+2.  Reuse existing classes/components listed above instead of inventing new ones when a
+    suitable one already exists — this is what keeps every page visually consistent.
+3.  Stick to the color palette in Section 3 unless there's a good reason to expand it —
+    and if you do, document the new color here.
+4.  Never copy images/illustrations from stock or template sites without a verified
+    license. Prefer original SVGs or MIT/CC0-licensed assets.
+5.  When you edit `style.css`, bump the `?v=N` query string on **every** HTML page that
+    loads it, so browsers don't serve a stale cached copy.
+6.  **After finishing any change, add a dated entry to the Changelog below** describing
+    what changed and why — this file is the single source of truth for the site's design
+    history.
 
 ---
 
@@ -154,5 +154,6 @@ If real auth is added later (e.g. Firebase/Supabase), update this section.
 | 2026-08-21 | Rebuilt `pricing.html` hero to reuse the same `.hero-dark` component as `index.html`; synced `style.css?v=` cache-busting number across all pages |
 | 2026-08-21 | Added this `README.md` design/documentation file |
 | 2026-08-21 | Made pricing cards smaller/cuter and single-row on `pricing.html` (5 plans fit one line on desktop, stack on mobile); shrank hero illustration further on all pages; gave `pricing.html` a different hero illustration (`hero-illustration.svg`, unDraw-based) than `index.html` (`rack-illustration.svg`) so the two pages don't look identical |
+| 2026-08-22 | Added "Available OS" section (Ubuntu, Debian, CentOS, AlmaLinux, Windows Server, Fedora) below pricing plans on `pricing.html` to match the layout and consistency of `index.html` |
 
 *(Add new rows above this line as the site evolves — most recent last.)*
