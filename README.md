@@ -24,8 +24,8 @@ Live site: `https://ikramullahk09800.github.io/cluad/`
 ├── signup.html             Signup page
 ├── style.css                Global stylesheet — shared by ALL pages
 ├── auth.css                  Extra styles for login.html / signup.html only
-├── rack-illustration.svg     Original custom server-rack illustration (hero visual)
-├── hero-illustration.svg     unDraw-based illustration (MIT licensed, recolored) — currently unused, kept as backup asset
+├── rack-illustration.svg     Original custom server-rack illustration (index.html hero visual)
+├── hero-illustration.svg     unDraw-based illustration (MIT licensed, recolored) — used as pricing.html hero visual (kept distinct from index.html's illustration)
 └── README.md                This file
 ```
 
@@ -153,5 +153,6 @@ If real auth is added later (e.g. Firebase/Supabase), update this section.
 | 2026-08-21 | Added dedicated `pricing.html` with 5 plans from 2GB to 32GB RAM |
 | 2026-08-21 | Rebuilt `pricing.html` hero to reuse the same `.hero-dark` component as `index.html`; synced `style.css?v=` cache-busting number across all pages |
 | 2026-08-21 | Added this `README.md` design/documentation file |
+| 2026-08-21 | Made pricing cards smaller/cuter and single-row on `pricing.html` (5 plans fit one line on desktop, stack on mobile); shrank hero illustration further on all pages; gave `pricing.html` a different hero illustration (`hero-illustration.svg`, unDraw-based) than `index.html` (`rack-illustration.svg`) so the two pages don't look identical |
 
 *(Add new rows above this line as the site evolves — most recent last.)*
