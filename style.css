@@ -393,33 +393,6 @@ nav {
 }
 
 /* Dedicated pricing page */
-.pricing-page-hero {
-    background: radial-gradient(circle at 20% 20%, #2E2A24 0%, #1A1713 65%);
-    padding: 100px 20px 70px;
-    text-align: center;
-}
-
-.pricing-page-hero .eyebrow {
-    display: block;
-    margin-bottom: 16px;
-}
-
-.pricing-page-hero h1 {
-    font-size: 44px;
-    font-weight: 700;
-    color: #F5F1EA;
-    letter-spacing: -1px;
-    margin-bottom: 18px;
-}
-
-.pricing-page-hero p {
-    max-width: 560px;
-    margin: 0 auto;
-    color: #B8B0A3;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
 .pricing-page-section {
     padding-top: 80px;
 }
@@ -438,10 +411,6 @@ nav {
 
 .pricing-footnote a:hover {
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .pricing-page-hero h1 { font-size: 32px; }
 }
 
 
